@@ -71,7 +71,7 @@ class DATABASE_CONFIG {
 		'encoding' => 'utf8',
 	);
 
-	public $default = array(
+	/*public $default = array(
 		'datasource' => 'Database/MySQL',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -80,7 +80,7 @@ class DATABASE_CONFIG {
 		'database' => 'bluebox',
 		'prefix' => '',
 		'encoding' => 'utf8',
-	);
+	);*/
 
 
 	public $test = array(
