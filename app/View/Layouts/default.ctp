@@ -107,6 +107,7 @@ function FbLogin(){
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       //FbLogin();
+      $(".logout").removeClass("hide");
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -170,7 +171,11 @@ function FbLogin(){
       <nav class="navbar navbar-default top-header" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
-            
+            <p class="logout hide">Log-out icon on a button:
+              <button type="button" class="btn btn-default btn-sm" onclick="FbLogout();">
+                <span class="glyphicon glyphicon-log-out"></span> Log out
+              </button>
+            </p>
             
           </div>
           <!--/.nav-collapse -->
