@@ -108,6 +108,4 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
-Configure::write('profileID','f5325b67842006e969d113f26c31ebd6');
-Configure::write('cardUploadPath','img/resources/card/');
-Configure::write('photoPath','img/resources/photo/');
+Configure::write('GoogleMapKey','AIzaSyDzMd9giLfjspXLffP4Hqzwgr2JNBWoaBU');

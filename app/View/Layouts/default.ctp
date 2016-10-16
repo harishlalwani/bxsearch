@@ -46,7 +46,7 @@
 		echo $this->fetch('script');
 	?>
 
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDEIYMd9a1hgaPa1JKiMO9gVj28O4fiH3Q"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<?php echo Configure::read('GoogleMapKey'); ?>"></script>
 
 <script>
 
