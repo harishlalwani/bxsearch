@@ -29,7 +29,7 @@ class UsersController extends AppController
 	        'app_secret'    =>  'dad027a80158b03f3de8afcad6221f47'
 
 	    ));
-	    $this->Auth->allow("login");
+	    $this->Auth->allow("login","m_fbconnect");
 	
 	}
 	
