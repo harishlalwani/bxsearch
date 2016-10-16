@@ -12,8 +12,7 @@ class AppController extends Controller
 	function beforeFilter() 
 	{ 	
 		// allow user actions
-		$this->Auth->allow();
-
+		
 		$this->Auth->loginError = "Could not login. Please try again.";
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->loginRedirect = array('controller' => 'films', 'action' => 'index');

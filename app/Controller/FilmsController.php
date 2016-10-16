@@ -48,8 +48,7 @@ class FilmsController extends AppController {
 	// allow user actions
 	public function beforeFilter() 
 	{ 
-		$this->Auth->allow();
-	
+		
 	}
 
 	public function index() {
