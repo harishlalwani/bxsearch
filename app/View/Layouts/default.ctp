@@ -165,17 +165,27 @@ function FbLogin(){
 </script>
 
 </head>
+<style>
+.navbar-header{
+  float: right;
+  margin-top: 35px;
+}
+
+</style>
 <body>
   <!--- Header --->
       <!-- Static navbar -->
       <nav class="navbar navbar-default top-header" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
-            <p class="logout hide">Log-out icon on a button:
-              <button type="button" class="btn btn-default btn-sm" onclick="FbLogout();">
-                <span class="glyphicon glyphicon-log-out"></span> Log out
-              </button>
-            </p>
+            <?php if ($this->Session->read('Auth.User')){ ?>
+              <p class="logout hide">
+                <button type="button" class="btn btn-default btn-sm" onclick="FbLogout();">
+                  <span class="glyphicon glyphicon-log-out"></span> Log out
+                </button>
+              </p>
+            <?php } ?>
+            
             
           </div>
           <!--/.nav-collapse -->
