@@ -71,29 +71,23 @@ class FilmsController extends AppController {
 		$access_token = trim($data['User']['access_token']);
 		$data = array();
 		$url = "https://graph.facebook.com/v2.6/search?q=restaurant&limit=1000&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
-		$data[] = json_decode(file_get_contents($url));
+		$data1 = json_decode(file_get_contents($url));
 		
 		$url = "https://graph.facebook.com/v2.6/search?q=theatre&limit=1000&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
-		$data[] = json_decode(file_get_contents($url));
+		$data2 = json_decode(file_get_contents($url));
 
 		$url = "https://graph.facebook.com/v2.6/search?q=multiplex&limit=1000&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
-		$data[] = json_decode(file_get_contents($url));
+		$data3 = json_decode(file_get_contents($url));
 
 
 		$url = "https://graph.facebook.com/v2.6/search?q=bioscope&limit=1000&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
-		$data[] = json_decode(file_get_contents($url));
+		$data4 = json_decode(file_get_contents($url));
 
-		$d = array();
-
-		foreach ($data as $key => $value) {
-			print_r($value);
-			array_merge($d, $value->data);
-		}
-		print_r($d);
+		$data = array_merge($data1->data, $data2->data, $data3->data, $data4->data);
 		/*$data = json_decode($data);*/
 		$r = (object) array();
 
-		$r->data = $d;
+		$r->data = $data;
 		return json_encode($r);
 	}
 }
