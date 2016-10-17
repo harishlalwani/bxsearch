@@ -34,6 +34,12 @@
             ));            
     echo $this->fetch('script');
   ?>
+<script type="text/javascript">
+  function FbLogout(){
+    FB.logout();
+    window.location = "<?php echo $this->Html->Url(array('controller' => 'Users', 'action' => 'logout')); ?>";
+  }
+</script>  
 
 </head>
 <body>

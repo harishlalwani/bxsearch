@@ -101,8 +101,3 @@ function FbLogin(){
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
-
-  function FbLogout(){
-    FB.logout();
-    window.location = "<?php echo $this->Html->Url(array('controller' => 'Users', 'action' => 'logout')); ?>";
-  }
