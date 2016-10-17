@@ -71,8 +71,8 @@ class FilmsController extends AppController {
 		$access_token = $data['User']['access_token'];
 
 
-		print_r($data);
-		$url = "https://graph.facebook.com/v2.6/search?q=restaurant&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
+		
+		echo $url = "https://graph.facebook.com/v2.6/search?q=restaurant&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
 		$data = json_decode(file_get_contents($url));
 		print_r($data);
 		$url = "https://graph.facebook.com/v2.6/search?q=theatre&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
