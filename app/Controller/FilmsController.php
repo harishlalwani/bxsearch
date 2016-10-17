@@ -69,6 +69,7 @@ class FilmsController extends AppController {
 		$latitude = trim($data['User']['latitude']);
 		$longitude = trim($data['User']['longitude']);
 		$access_token = trim($data['User']['access_token']);
+		$data = array();
 		$url = "https://graph.facebook.com/v2.6/search?q=restaurant&limit=1000&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
 		$data[] = json_decode(file_get_contents($url));
 		
@@ -85,7 +86,6 @@ class FilmsController extends AppController {
 		$d = array();
 
 		foreach ($data as $key => $value) {
-			print_r($data);
 			array_merge($d, $value->data);
 		}
 		/*$data = json_decode($data);*/
