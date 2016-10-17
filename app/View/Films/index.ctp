@@ -1,12 +1,10 @@
 <!-- All the files that are required -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-
-
-
 <?php 
   echo $this->Html->css(array(                
           'login_page.css'
@@ -27,17 +25,6 @@
     <input id="ex4" type="text" data-slider-min="2" data-slider-max="20" data-slider-step="1" data-slider-value="2" data-slider-orientation="vertical"/>
   </div>
 </div>
-
-<?php
- echo $this->Html->css(array(                
-          'login_page.css'
-          ) );
-
-  
-  echo $this->fetch('css');
-?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.css">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.js"></script>
 <script type="text/javascript">
       var distance = 2;
       $(document).ready(function() {
@@ -62,12 +49,15 @@
               promise.success(function (data) {
                 var data = JSON.parse(data)
                     $(data.data).each(function(i, item) {
-                        var tdArr = [];
-                        //console.log(item);
-                        tdArr.push(item.name);
-                        tdArr.push(parseFloat(item.location.latitude));
-                        tdArr.push(parseFloat(item.location.longitude));
-                        markers.push(tdArr);
+                        if(item.category_list.name == "Diner" || item.category_list.name == "Movie Theater"){
+                          var tdArr = [];
+                          //console.log(item);
+                          tdArr.push(item.name);
+                          tdArr.push(parseFloat(item.location.latitude));
+                          tdArr.push(parseFloat(item.location.longitude));
+                          markers.push(tdArr);
+                        }
+                        
 
                         //console.log(markers);
                       });

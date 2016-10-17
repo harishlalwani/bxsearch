@@ -69,17 +69,8 @@ class FilmsController extends AppController {
 		$latitude = trim($data['User']['latitude']);
 		$longitude = trim($data['User']['longitude']);
 		$access_token = trim($data['User']['access_token']);
-		$url = "https://graph.facebook.com/v2.6/search?q=restaurant&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
-		$data = json_decode(file_get_contents($url));
-		
-		$url = "https://graph.facebook.com/v2.6/search?q=theatre&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
-		$data2 = json_decode(file_get_contents($url));
-
-		$data = array_merge($data->data,$data2->data);
-		/*$data = json_decode($data);*/
-		$r = (object) array();
-
-		$r->data = $data;
-		return json_encode($r);
+		$url = "https://graph.facebook.com/v2.6/search?distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
+		$data = file_get_contents($url);
+		return $data;
 	}
 }
