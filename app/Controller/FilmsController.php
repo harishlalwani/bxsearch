@@ -80,6 +80,6 @@ class FilmsController extends AppController {
 		/*$r = (object) array();*/
 
 		/*$r->data = $data;*/
-		return json_encode($data);
+		return $data;
 	}
 }
