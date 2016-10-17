@@ -82,11 +82,15 @@ class FilmsController extends AppController {
 		$url = "https://graph.facebook.com/v2.6/search?q=bioscope&limit=1000&distance=$distance&type=place&center=$latitude,$longitude&access_token=".$access_token;
 		$data[] = json_decode(file_get_contents($url));
 
-		$data = array_merge($data);
+		$d = array();
+
+		foreach ($data as $key => $value) {
+			array_merge($d, $value->data)
+		}
 		/*$data = json_decode($data);*/
 		$r = (object) array();
 
-		$r->data = $data;
+		$r->data = $d;
 		return json_encode($r);
 	}
 }
