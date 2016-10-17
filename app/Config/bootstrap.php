@@ -108,4 +108,4 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
-Configure::write('GoogleMapKey','AIzaSyDzMd9giLfjspXLffP4Hqzwgr2JNBWoaBU');
+Configure::write('GoogleMapKey','AIzaSyD26zJlmXHsRuhOU-KqPYYLrUr6486-IHs');
