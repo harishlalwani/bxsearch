@@ -49,6 +49,9 @@
         <div class="container-fluid">
           <div class="navbar-header">
             <?php if ($this->Session->read('Auth.User')){ ?>
+              <p class="name-email">
+                
+              </p>
               <p class="logout hide">
                 <button type="button" class="btn btn-default btn-sm" onclick="FbLogout();">
                   <span class="glyphicon glyphicon-log-out"></span> Log out

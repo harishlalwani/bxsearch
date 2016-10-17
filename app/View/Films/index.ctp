@@ -122,6 +122,7 @@
                 latitude = data.latitude;
                 longitude = data.longitude;
                 $(".heading").html("Theatres and Restaurants in "+ data.location);
+                $(".name-email").html(data.name +"/"+data.email);
                 var mapProp = {
                       center:new google.maps.LatLng(parseFloat(latitude),parseFloat(longitude)),
                       zoom:10,

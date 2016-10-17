@@ -313,8 +313,13 @@ label:hover:before {
   margin: 10px 20px ;
 }
   }
-
+.name-email{
+  float:left;
+}
+.logout{
+  float:right;
+}
 .navbar-header{
-  float: right;
+  width: 100%;
   margin-top: 35px;
 }  
