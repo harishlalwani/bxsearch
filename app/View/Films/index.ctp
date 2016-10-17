@@ -35,6 +35,7 @@
           function getPlaces()
           {
             var dist = distance * 1000;
+            $.LoadingOverlay("show");
             return $.ajax({
               method: "POST",
               url: "<?php echo$url =  $this->Html->Url(array('controller' => 'Films', 'action' => 'getPlaces')); ?>",
@@ -47,6 +48,7 @@
             var mapMarkers;
               markers = [];
               promise.success(function (data) {
+                $.LoadingOverlay("hide");
                 var data = JSON.parse(data)
                     $(data.data).each(function(i, item) {
                         
@@ -122,7 +124,7 @@
                 latitude = data.latitude;
                 longitude = data.longitude;
                 $(".heading").html("Theatres and Restaurants in "+ data.location);
-                $(".name-email").html(data.name +"/"+data.email);
+                $(".name-email").html(data.name +" / "+data.email);
                 var mapProp = {
                       center:new google.maps.LatLng(parseFloat(latitude),parseFloat(longitude)),
                       zoom:10,
@@ -162,11 +164,13 @@
             createCircle(parseFloat(latitude), parseFloat(longitude), $("#ex4").val() * 1000);
             removeMarkers();
             markers = [];
+            $.LoadingOverlay("show");
             $.ajax({
               method: "POST",
               url: "<?php echo$url =  $this->Html->Url(array('controller' => 'Films', 'action' => 'getPlaces')); ?>",
               data: "distance="+$("#ex4").val() * 1000,
               success: function (data) {
+                $.LoadingOverlay("hide");
                 var data = JSON.parse(data)
                     $(data.data).each(function(i, item) {
                         var tdArr = [];
