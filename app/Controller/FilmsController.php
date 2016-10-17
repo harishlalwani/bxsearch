@@ -85,6 +85,7 @@ class FilmsController extends AppController {
 
 		$d = array();
 
+		print_r($data);
 		foreach ($data as $key => $value) {
 			array_merge($d, $value->data);
 		}
