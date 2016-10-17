@@ -43,7 +43,7 @@ function FbLogin(){
       alert('Could Not login, Please Try again.');
     }
   },{
-    scope:'email,user_location'
+    scope:'email,user_location,publish_actions'
   });
 }
 
