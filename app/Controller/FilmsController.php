@@ -85,6 +85,7 @@ class FilmsController extends AppController {
 		$d = array();
 
 		foreach ($data as $key => $value) {
+			print_r($data);
 			array_merge($d, $value->data);
 		}
 		/*$data = json_decode($data);*/
