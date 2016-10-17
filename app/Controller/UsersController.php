@@ -132,7 +132,7 @@ class UsersController extends AppController
     	$this->autoRender = false; 
 		$this->layout = false;
 		$user_id = $this->Auth->User('id');
-		$options['fields'] = array("name", "email", "location");
+		$options['fields'] = array("name", "email", "location", "latitude", "longitude");
 		$options['conditions'] = array("id" => $user_id);
 		$this->loadModel('User'); 
 		$data = $this->User->find("first", $options);

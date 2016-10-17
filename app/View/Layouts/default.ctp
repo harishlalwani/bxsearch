@@ -31,7 +31,7 @@
 <?php
     echo $this->Html->script(array( 
             'default',
-            /*'loadingoverlay'   */      
+            'loadingoverlay'         
             ));            
     echo $this->fetch('script');
   ?>

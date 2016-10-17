@@ -13,7 +13,7 @@ function FbLogin(){
         response.fb_access_token = accessToken;
         if (uid > 1)
         {
-          /*$.LoadingOverlay("show");*/
+          $.LoadingOverlay("show");
           jQuery.ajax({
             type: 'POST',
             url: '/users/m_fbconnect',
@@ -22,7 +22,7 @@ function FbLogin(){
               data = eval('(' + data + ')');   
               if (data.status == 1) {   
                 fbLogginCheck = true;
-               /* $.LoadingOverlay("hide");*/
+                $.LoadingOverlay("hide");
                 if(data.redirect)
                 {
                   window.location = data.redirect_uri;

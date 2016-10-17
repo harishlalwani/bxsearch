@@ -35,7 +35,7 @@
           function getPlaces()
           {
             var dist = distance * 1000;
-            /*$.LoadingOverlay("show");*/
+            $.LoadingOverlay("show");
             return $.ajax({
               method: "POST",
               url: "<?php echo$url =  $this->Html->Url(array('controller' => 'Films', 'action' => 'getPlaces')); ?>",
@@ -48,7 +48,7 @@
             var mapMarkers;
               markers = [];
               promise.success(function (data) {
-                /*$.LoadingOverlay("hide");*/
+                $.LoadingOverlay("hide");
                 var data = JSON.parse(data)
                     $(data.data).each(function(i, item) {
                         
@@ -164,13 +164,13 @@
             createCircle(parseFloat(latitude), parseFloat(longitude), $("#ex4").val() * 1000);
             removeMarkers();
             markers = [];
-           /* $.LoadingOverlay("show");*/
+            $.LoadingOverlay("show");
             $.ajax({
               method: "POST",
               url: "<?php echo$url =  $this->Html->Url(array('controller' => 'Films', 'action' => 'getPlaces')); ?>",
               data: "distance="+$("#ex4").val() * 1000,
               success: function (data) {
-                /*$.LoadingOverlay("hide");*/
+                $.LoadingOverlay("hide");
                 var data = JSON.parse(data)
                     $(data.data).each(function(i, item) {
                         var tdArr = [];
@@ -187,8 +187,7 @@
                  }   
             });
           });
-        
-        
+
                      
        });
     </script>
