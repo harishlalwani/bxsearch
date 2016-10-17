@@ -114,7 +114,12 @@ class UsersController extends AppController
        	
        	if(!empty($data))
        	{
-       		$this->Session->write('Auth.User', $data['User']);
+		$d = array();
+		$d['User']['id'] = $data['User']['id'];
+       		 $d['User']['location'] =  $fb_data['User']['location'];
+        	$d['User']['access_token'] = $access_token;
+       		$this->User->save($d);
+		$this->Session->write('Auth.User', $data['User']);
 			$this->Auth->_loggedIn = true;
        	}	
        	else
