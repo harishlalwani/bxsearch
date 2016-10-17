@@ -49,7 +49,7 @@
               promise.success(function (data) {
                 var data = JSON.parse(data)
                     $(data.data).each(function(i, item) {
-                        if(item.category_list.name == "Diner" || item.category_list.name == "Movie Theater"){
+                        if(item.category_list.name == "Diner" || item.category_list.name == "Movie Theater" || item.category == "Restaurant/Cafe"){
                           var tdArr = [];
                           //console.log(item);
                           tdArr.push(item.name);
