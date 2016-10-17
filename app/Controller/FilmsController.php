@@ -77,7 +77,7 @@ class FilmsController extends AppController {
 
 		$data = array_merge($data->data,$data2->data);
 		/*$data = json_decode($data);*/
-
+		$r = (object) array();
 
 		$r->data = $data;
 		return json_encode($r);
