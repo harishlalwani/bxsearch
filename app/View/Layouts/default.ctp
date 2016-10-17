@@ -76,7 +76,7 @@
         <div class="col-lg-12">&nbsp;</div>
           <div class="row">
               <div class="col-lg-12">
-                  <p class="text-center"><i> 2015 All rights reserved</i></p>
+                  <p class="text-center"><i>  All rights reserved</i></p>
                 </div>  
             
           </div>
