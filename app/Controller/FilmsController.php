@@ -79,7 +79,7 @@ class FilmsController extends AppController {
 		/*$data = json_decode($data);*/
 		/*$r = (object) array();*/
 
-		/*$r->data = $data;*/*/
+		/*$r->data = $data;*/
 		return json_encode($data);
 	}
 }
