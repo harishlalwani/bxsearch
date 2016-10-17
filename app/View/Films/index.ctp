@@ -27,34 +27,7 @@
     <input id="ex4" type="text" data-slider-min="2" data-slider-max="20" data-slider-step="1" data-slider-value="2" data-slider-orientation="vertical"/>
   </div>
 </div>
-<style>
-.heading{
-  font-size: 20px;
-}
-#googleMap{
-  width: 1090px; height:100%; display:inline-block; float:left;
-}
-.slider{
-  height: 100% !important;
-  width: 20px;
-  display: inline-block;
-  float: left;
-  margin-left: 10px;
-}
-.sub-content{
-  height:85%;
-  margin: 10px 36px ;
-}
-@media only screen and (max-device-width: 480px) {
-    #googleMap{
-      width: 90%; height:100%; display:inline-block; float:left;
-    }
-    .sub-content{
-  height:85%;
-  margin: 10px 20px ;
-}
-  }
-</style>
+
 <?php
  echo $this->Html->css(array(                
           'login_page.css'

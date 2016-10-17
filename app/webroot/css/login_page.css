@@ -286,3 +286,35 @@ label:hover:before {
   color: #aaaaaa;
   font-weight: bold;
 }
+
+.heading{
+  font-size: 20px;
+}
+#googleMap{
+  width: 1090px; height:100%; display:inline-block; float:left;
+}
+.slider{
+  height: 100% !important;
+  width: 20px;
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+}
+.sub-content{
+  height:85%;
+  margin: 10px 36px ;
+}
+@media only screen and (max-device-width: 480px) {
+    #googleMap{
+      width: 90%; height:100%; display:inline-block; float:left;
+    }
+    .sub-content{
+  height:85%;
+  margin: 10px 20px ;
+}
+  }
+
+.navbar-header{
+  float: right;
+  margin-top: 35px;
+}  
