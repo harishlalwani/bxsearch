@@ -22,7 +22,7 @@
   <p class="heading"></p>
   <div class="sub-content">
     <div id="googleMap" ></div>
-    <input id="ex4" type="text" data-slider-min="2" data-slider-ticks="[2, 8, 12, 16, 20]"  data-slider-ticks-labels='["2km", "8km", "12km", "16km", "20km"]'data-slider-max="20" data-slider-step="1" data-slider-value="2" data-slider-orientation="vertical"/>
+    <input id="ex4" type="text" data-slider-min="2" data-slider-ticks="[2,4,6,8,10,12,14,16,18,20]"  data-slider-ticks-labels='["2km","4km","6km","8km","10km","12km","14km","16km","18km","20km"]' data-slider-max="20" data-slider-step="1" data-slider-value="2" data-slider-orientation="vertical"/>
   </div>
 </div>
 <script type="text/javascript">
